@@ -613,7 +613,7 @@ impl NVML {
                 devices.as_mut_ptr()
             ))?;
 
-            Ok(devices.iter().map(|d| Device::from(*d)).collect())
+            Ok(devices.into_iter().map(Device::from).collect())
         }
     }
 
@@ -660,7 +660,7 @@ impl NVML {
 
             nvml_try(nvmlSystemGetHicVersion(&mut count, hics.as_mut_ptr()))?;
             
-            hics.iter().map(|h| HwbcEntry::try_from(*h)).collect()
+            hics.into_iter().map(HwbcEntry::try_from).collect()
         }
     }
 
