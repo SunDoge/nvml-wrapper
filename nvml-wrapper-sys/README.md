@@ -68,7 +68,7 @@ sudo ln -s /usr/lib/nvidia-<driver-version>/libnvidia-ml.so /usr/lib
 
 ## NVML Support
 
-These bindings were generated for NVML version 9. Each new version of NVML is
+These bindings were generated for NVML version 9.2. Each new version of NVML is
 guaranteed to be backwards-compatible according to NVIDIA, so these bindings
 should be useful regardless of NVML version bumps.
 
